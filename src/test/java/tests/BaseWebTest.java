@@ -8,6 +8,8 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.After;
 import org.junit.Before;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseWebTest {
 
     public static final ProjectConfig cfg = ConfigFactory.create(ProjectConfig.class);
@@ -19,6 +21,7 @@ public class BaseWebTest {
         Configuration.driverManagerEnabled = true;
         Configuration.headless = false;
         Configuration.browserSize = "1900x1080";
+        Configuration.pageLoadTimeout = 180000;
     }
 
     @After
