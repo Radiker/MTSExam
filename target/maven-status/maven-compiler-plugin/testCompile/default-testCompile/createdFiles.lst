@@ -1,0 +1,7 @@
+pages\BankCreditCardPage.class
+tests\BaseWebTest.class
+tests\CorrectTextPurchasesTest.class
+config\ProjectConfig.class
+pages\BankPurchasesPage.class
+pages\HomePage.class
+tests\IssueCreditCardTest.class
