@@ -16,19 +16,20 @@ public class BaseWebTest {
 
     @Before
     public void setUp() {
-        /*WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
+        Configuration.browserSize = "1920x1080";
+        /*
         Configuration.driverManagerEnabled = true;
         Configuration.headless = false;
-        Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadTimeout = 180000;*/
-        Configuration.browser = "chrome";
-        Configuration.browserSize = "1920x1080";
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        */
+
+        //Configuration.remote = "http://localhost:4444/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
+
         Configuration.pageLoadTimeout = 180000;
     }
 
