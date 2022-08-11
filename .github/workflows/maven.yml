@@ -15,7 +15,8 @@ jobs:
         run: ./cm selenoid start --vnc
       - name: "Запускаем selenoid-ui"
         run: ./cm selenoid-ui start
+        
       - name: "Используем master репазиторий"
         uses: actions/checkout@v1
-#      - name: "Запускаем тесты"
-#        run: mvn clean test
+      - name: "Запускаем тесты"
+        run: mvn clean test
