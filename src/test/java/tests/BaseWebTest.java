@@ -19,11 +19,11 @@ public class BaseWebTest {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
-        //Configuration.remote = "http://localhost:4444/wd/hub";
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
-        Configuration.browserCapabilities = capabilities;
+        Configuration.remote = "http://localhost:4444/wd/hub";
+        //DesiredCapabilities capabilities = new DesiredCapabilities();
+        //capabilities.setCapability("enableVNC", true);
+        //capabilities.setCapability("enableVideo", true);
+        //Configuration.browserCapabilities = capabilities;
         Configuration.pageLoadTimeout = 180000;
     }
 
