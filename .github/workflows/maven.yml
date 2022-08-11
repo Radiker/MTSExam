@@ -1,14 +1,11 @@
 name: Run test
 
-env:
-  OS: "ubuntu-latest"
-
 on:
   push
 
 jobs:
   install_dependency_and_run_test:
-    runs-on: $OS
+    runs-on: ubuntu-latest
     steps:
       - name: "Скачивание Selenoid"
         run: curl -s https://aerokube.com/cm/bash  | bash
