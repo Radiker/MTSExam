@@ -1,0 +1,22 @@
+name: Run test
+
+on:
+  push
+
+jobs:
+  install_dependency_and_run_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Скачивание Selenoid"
+        run: curl -s https://aerokube.com/cm/bash  | bash
+      - name: "Даем права на запуск selenoid"
+        run: chmod +x ./cm
+      - name: "Запускаем selenoid"
+        run: ./cm selenoid start --vnc
+      - name: "Запускаем selenoid-ui"
+        run: ./cm selenoid-ui start
+        
+      - name: "Используем master репазиторий"
+        uses: actions/checkout@v1
+      - name: "Запускаем тесты"
+        run: mvn clean test
