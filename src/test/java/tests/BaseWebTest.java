@@ -30,7 +30,7 @@ public class BaseWebTest {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
 
-        Configuration.pageLoadTimeout = 180000;
+        Configuration.pageLoadTimeout = 360000;
     }
 
     @After
